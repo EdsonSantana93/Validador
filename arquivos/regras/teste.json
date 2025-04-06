@@ -1,0 +1,44 @@
+{
+    "atributo_id": "cod_idt_even",
+    "atributo_contrato": "num_opcr",
+    "atributo_evento": "nom_tipo_even",
+    "regras": [
+        {
+            "codigo_tt": "VEI007",
+            "atributos": [
+                {
+                    "nome": "cod_tipo_even",
+                    "condicao": "= 220"
+                },
+                {
+                    "nome": "cod_fase_cred_finn",
+                    "condicao": "= 10"
+                },
+                {
+                    "nome": "cod_prod_finn",
+                    "condicao": "= 211"
+                },
+                {
+                    "nome": "cod_prod_opel",
+                    "condicao": "= 21358"
+                },
+                {
+                    "nome": "cod_tipo_vlr_rtte",
+                    "condicao": "= 4017"
+                },
+                {
+                    "nome": "vlr_rtte",
+                    "condicao": "> 0"
+                }
+            ],
+            "atributo_valor": "vlr_rtte",
+            "atributo_data_contabil": "dat_cntb",
+            "contas": {
+                "debito": "15610090",
+                "credito": "70702380"
+            }
+        }
+    ],
+    "racf": "edfersa",
+    "data_hora_ultima_alteracao": "2025-04-06 00:59:24"
+}

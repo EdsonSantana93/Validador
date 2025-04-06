@@ -1,0 +1,20 @@
+{
+    "cenarios": [
+        {
+            "cenario": "1",
+            "tts": [
+                "VEI007",
+                "VEI008",
+                "VEI009"
+            ]
+        },
+        {
+            "cenario": "2",
+            "tts": [
+                "VEI010"
+            ]
+        }
+    ],
+    "racf": "edfersa",
+    "data_hora_ultima_atualizacao": "2025-04-05 20:49:25"
+}

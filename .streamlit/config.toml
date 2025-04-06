@@ -1,0 +1,2 @@
+[server]
+maxUploadSize = 20480 # Tamanho em MB (20480 MB = 20 GB)

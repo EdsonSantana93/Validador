@@ -1,0 +1,33 @@
+{
+    "cenarios": [
+        {
+            "cenario": "1 - Contrata\u00e7\u00e3o",
+            "tts": [
+                "VEI001",
+                "VEI002",
+                "VEI003",
+                "VEI004",
+                "VEI005"
+            ]
+        },
+        {
+            "cenario": "2 - Recebimento",
+            "tts": [
+                "VEI006",
+                "VEI007",
+                "VEI008"
+            ]
+        },
+        {
+            "cenario": "3 - Recebimento Estornado",
+            "tts": [
+                "VEI009",
+                "VEI010",
+                "VEI011",
+                "VEI012"
+            ]
+        }
+    ],
+    "racf": "edfersa",
+    "data_hora_ultima_atualizacao": "2025-04-06 01:07:18"
+}
