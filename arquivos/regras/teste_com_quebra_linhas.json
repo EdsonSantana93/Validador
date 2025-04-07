@@ -9,23 +9,23 @@
                 "atributos": [
                     {
                         "nome": "cod_tipo_even",
-                        "condicao": "= 220"
+                        "condicao": "== 220"
                     },
                     {
                         "nome": "cod_fase_cred_finn",
-                        "condicao": "= 10"
+                        "condicao": "== 10"
                     },
                     {
                         "nome": "cod_prod_finn",
-                        "condicao": "= 211"
+                        "condicao": "== 211"
                     },
                     {
                         "nome": "cod_prod_opel",
-                        "condicao": "= 21358"
+                        "condicao": "== 21358"
                     },
                     {
                         "nome": "cod_tipo_vlr_rtte",
-                        "condicao": "= 4017"
+                        "condicao": "== 4017"
                     },
                     {
                         "nome": "vlr_rtte",
@@ -44,19 +44,19 @@
                 "atributos": [
                     {
                         "nome": "cod_tipo_even",
-                        "condicao": "= 220"
+                        "condicao": "== 220"
                     },
                     {
                         "nome": "cod_fase_cred_finn",
-                        "condicao": "= 10"
+                        "condicao": "== 10"
                     },
                     {
                         "nome": "cod_prod_finn",
-                        "condicao": "= 211"
+                        "condicao": "== 211"
                     },
                     {
                         "nome": "cod_prod_opel",
-                        "condicao": "= 21358"
+                        "condicao": "== 21358"
                     },
                     {
                         "nome": "cod_tipo_vlr_rtte",
@@ -79,19 +79,19 @@
                 "atributos": [
                     {
                         "nome": "cod_tipo_even",
-                        "condicao": "= 220"
+                        "condicao": "== 220"
                     },
                     {
                         "nome": "cod_fase_cred_finn",
-                        "condicao": "= 10"
+                        "condicao": "== 10"
                     },
                     {
                         "nome": "cod_prod_finn",
-                        "condicao": "= 211"
+                        "condicao": "== 211"
                     },
                     {
                         "nome": "cod_prod_opel",
-                        "condicao": "= 21358"
+                        "condicao": "== 21358"
                     },
                     {
                         "nome": "cod_tipo_vlr_rtte",
@@ -118,19 +118,19 @@
                     },
                     {
                         "nome": "cod_tipo_even",
-                        "condicao": "= 220"
+                        "condicao": "== 220"
                     },
                     {
                         "nome": "cod_fase_cred_finn",
-                        "condicao": "= 10"
+                        "condicao": "== 10"
                     },
                     {
                         "nome": "cod_prod_finn",
-                        "condicao": "= 211"
+                        "condicao": "== 211"
                     },
                     {
                         "nome": "cod_prod_opel",
-                        "condicao": "= 21358"
+                        "condicao": "== 21358"
                     },
                     {
                         "nome": "vlr_rtte",
@@ -153,19 +153,19 @@
                     },
                     {
                         "nome": "cod_tipo_even",
-                        "condicao": "= 220"
+                        "condicao": "== 220"
                     },
                     {
                         "nome": "cod_fase_cred_finn",
-                        "condicao": "= 10"
+                        "condicao": "== 10"
                     },
                     {
                         "nome": "cod_prod_finn",
-                        "condicao": "= 211"
+                        "condicao": "== 211"
                     },
                     {
                         "nome": "cod_prod_opel",
-                        "condicao": "= 21358"
+                        "condicao": "== 21358"
                     },
                     {
                         "nome": "vlr_rtte",
@@ -188,19 +188,19 @@
                     },
                     {
                         "nome": "cod_tipo_even",
-                        "condicao": "= 220"
+                        "condicao": "== 220"
                     },
                     {
                         "nome": "cod_fase_cred_finn",
-                        "condicao": "= 10"
+                        "condicao": "== 10"
                     },
                     {
                         "nome": "cod_prod_finn",
-                        "condicao": "= 211"
+                        "condicao": "== 211"
                     },
                     {
                         "nome": "cod_prod_opel",
-                        "condicao": "= 21358"
+                        "condicao": "== 21358"
                     },
                     {
                         "nome": "vlr_rtte",
@@ -216,6 +216,6 @@
             }
         ],
         "racf": "edfersa",
-        "data_hora_ultima_alteracao": "2025-04-07 11:33:00"
+        "data_hora_ultima_alteracao": "2025-04-07 14:46:24"
     }
 ]

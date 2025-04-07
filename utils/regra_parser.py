@@ -72,9 +72,11 @@ def processar_regra(regra: str) -> List[Dict[str, str]]:
                     atributos_dict[nome]['condicao'] = [atributos_dict[nome]['condicao'].split()[-1]]
                 atributos_dict[nome]['condicao'].append(valor)
             else:
+                # Correção: Substituir '=' por '=='
+                operador_corrigido = '==' if operador == '=' else operador
                 atributos_dict[nome] = {
                     "nome": nome,
-                    "condicao": f"{operador} {valor}" if valor else "exists"
+                    "condicao": f"{operador_corrigido} {valor}" if valor else "exists"
                 }
 
     # Pós-processamento: converte listas acumuladas em in/not in
