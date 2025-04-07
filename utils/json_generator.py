@@ -24,7 +24,7 @@ def preencher_json_regras(regras_df: pd.DataFrame, parametros_df: pd.DataFrame) 
         for _, regra_row in regras_df.iterrows():
             regra = {
                 "codigo_tt": regra_row["codigo_tt"],
-                "atributos": processar_regra(regra_row["regra"]),
+                "atributos": processar_regra(regra_row["regra"]), # Chama processar_regra
                 "atributo_valor": regra_row["atributo_valor"],
                 "atributo_data_contabil": regra_row["atributo_data_contabil"],
                 "contas": {
@@ -34,18 +34,7 @@ def preencher_json_regras(regras_df: pd.DataFrame, parametros_df: pd.DataFrame) 
             }
             dados_regra["regras"].append(regra)
         dados_json.append(dados_regra)
-    return dados_json
-
-def gerar_arquivo_json_regras(dados_json: List[Dict], parametros_df: pd.DataFrame) -> None:
-    """Gera arquivos JSON individuais para cada regra."""
-    for i, dados_regra in enumerate(dados_json):
-        nome_arquivo = f'arquivos/regras/{parametros_df["nome_arquivo"][i]}.json'
-        try:
-            with open(nome_arquivo, "w") as arquivo_json:
-                json.dump(dados_regra, arquivo_json, indent=4)
-        except Exception as e:
-            st.error(f"Erro ao gerar arquivo JSON {nome_arquivo}: {e}") # Adiciona mensagem de erro
-            
+    return dados_json            
 
 def preencher_json_cenarios(cenarios_df: pd.DataFrame, parametros_df: pd.DataFrame) -> Dict:
     """Preenche o JSON com os dados dos cenários."""
@@ -68,14 +57,14 @@ def preencher_json_cenarios(cenarios_df: pd.DataFrame, parametros_df: pd.DataFra
     except Exception as e:
         raise ValueError(f"Erro ao preencher JSON de cenários: {e}")
 
-def gerar_arquivos_json_cenarios(dados_json: List[Dict], parametros_df: pd.DataFrame) -> None:
+def gerar_arquivos_json(dados_json: List[Dict], parametros_df: pd.DataFrame, caminho: st) -> None:
     """Gera um único arquivo JSON contendo um array de cenários."""
-    nome_arquivo = f'arquivos/cenarios/{parametros_df["nome_arquivo"][0]}.json'
+    nome_arquivo = f'arquivos/{caminho}/{parametros_df["nome_arquivo"][0]}.json'
     try:
         with open(nome_arquivo, "w") as arquivo_json:
             json.dump(dados_json, arquivo_json, indent=4)
     except FileNotFoundError:
-        st.error(f"Diretório 'arquivos/cenarios' não encontrado.")
+        st.error(f"Diretório 'arquivos/{caminho}' não encontrado.")
         return
     except Exception as e:
         st.error(f"Erro ao gerar arquivo JSON {nome_arquivo}: {e}")

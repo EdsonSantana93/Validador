@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 from utils.excel_utils import ler_dados
-from utils.json_generator import  preencher_json_regras, gerar_arquivo_json_regras
+from utils.json_generator import  preencher_json_regras, gerar_arquivos_json
 
 def exibir_cadastro_view_regras():
     """Exibe a view de cadastro de regras."""
@@ -21,10 +21,11 @@ def exibir_cadastro_view_regras():
     if arquivo_excel:
         try:
             sheets = ('regras', 'parametros_adicionais')
+            caminho = 'regras'
             regras_df, parametros_df = ler_dados(arquivo_excel, sheets)
             if col1.button("Salvar Regras", type="primary"):
                 dados_json = preencher_json_regras(regras_df, parametros_df)
-                gerar_arquivo_json_regras(dados_json, parametros_df)
+                gerar_arquivos_json(dados_json, parametros_df, caminho)
                 st.toast("Arquivos JSON gerados com sucesso!")
         except Exception as e:
             st.error(f"Erro ao processar arquivo: {e}")

@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 from utils.excel_utils import ler_dados
-from utils.json_generator import preencher_json_cenarios, gerar_arquivos_json_cenarios
+from utils.json_generator import preencher_json_cenarios, gerar_arquivos_json
 
 def exibir_cadastro_cenarios_view():
     """Exibe a view de cadastro de cenários."""
@@ -22,9 +22,10 @@ def exibir_cadastro_cenarios_view():
         try:
             sheets = ('Cenários', 'parametros_adicionais')
             cenarios_df, parametros_df = ler_dados(arquivo_excel, sheets)
+            caminho = 'cenarios'
             if col1.button("Salvar Cenários", type="primary"):
                 dados_json = preencher_json_cenarios(cenarios_df, parametros_df)
-                gerar_arquivos_json_cenarios(dados_json, parametros_df)
+                gerar_arquivos_json(dados_json, parametros_df, caminho)
                 st.toast("Arquivos JSON de cenários gerados com sucesso!")
         except Exception as e:
             st.error(f"Erro ao processar arquivo: {e}")
